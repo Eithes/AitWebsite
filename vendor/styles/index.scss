@@ -1,0 +1,13 @@
+// base
+@import './base/reset.scss';
+@import './base/vars&mixs.scss';
+@import './base/normalize.scss';
+@import './base/typography.scss';
+
+// layout
+@import './layout/index.scss';
+
+// partials
+@import './partials/menu.scss';
+@import './partials/form.scss';
+@import './partials/carousel.scss';

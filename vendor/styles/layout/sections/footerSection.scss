@@ -1,0 +1,70 @@
+.main-footer {
+  margin-top: auto;
+  min-height: 120px;
+  width: 100%;
+  background: $mainColor;
+  color: $secondColor;
+  .container {
+    padding: 2.5em 0;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    .contact {
+      padding-bottom: 2em;
+      flex: 0 0 33.3333%;
+      p {
+        padding: 0.5em 0;
+      }
+      p:first-child {
+        padding-bottom: 0.6em;
+      }
+    }
+    .insta {
+      padding-bottom: 0em;
+      a {
+        color: $headerColor;
+        font-size: 3em;
+        display: inline-block;
+        padding-top: 0em;
+        padding-bottom: 0.5em;
+      }
+    }
+    .fa-phone,
+    .fa-home {
+      margin-right: 0.3em;
+    }
+  }
+  a.mailto {
+    display: inline-block;
+    text-decoration: underline;
+    color: $headerColor;
+    margin-bottom: 2.2em;
+    i {
+      font-size: 1.2em;
+      margin-right: 0.3em;
+    }
+  }
+  p {
+    margin-right: 20%;
+  }
+}
+@media screen and (min-width: 715px) {
+  .main-footer {
+    .contacts {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+}
+@media screen and (min-width: 730px) {
+  .main-footer {
+    .contacts {
+      flex-direction: row;
+      justify-content: flex-start;
+      .contact {
+        flex: 0 0 33%;
+      }
+    }
+  }
+}

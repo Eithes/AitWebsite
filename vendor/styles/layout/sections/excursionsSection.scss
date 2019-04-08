@@ -1,0 +1,361 @@
+.excursions {
+  background: $backgroundTextColor;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 0;
+    padding-bottom: 3.5em;
+  }
+  .card-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1.5em;
+    padding-bottom: 3em;
+    transition: all 0.2s ease-in-out;
+    button {
+      width: 100%;
+      font-size: 1.2em;
+      padding: 0.4em 0.3em;
+      margin-top: auto;
+      outline: none;
+    }
+  }
+  .card {
+    cursor: pointer;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 4px $secondColor;
+    margin-bottom: 0.8em;
+    background-color: $backgroundTextColor;
+    background-image: url(/img/orn.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    transition: all 0.3s ease-in-out;
+
+    &-img {
+      min-width: 100.4%;
+      max-height: 150px;
+      overflow: hidden;
+      transform: translate(-1px, -1px); /*wtf*/
+      img {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        display: block;
+        position: relative;
+        top: 25%;
+        transform: translateY(-25%);
+      }
+    }
+    &-info {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7em 1em;
+      .type {
+        display: flex;
+        flex-direction: row-reverse;
+        i {
+          margin: 0.2em;
+        }
+      }
+    }
+    &-route {
+      padding: 0.5em 1em;
+      margin-bottom: 0px;
+    }
+    &:hover {
+      box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+      color: darken($secondColor, 30%);
+    }
+  }
+  .individual {
+    background-image: url(/img/back.png);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-color: $thirdColor;
+    &:hover {
+      color: $textColor;
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+}
+@media screen and (min-width: 550px) {
+  .excursions {
+    .card-wrapper {
+      flex: 0 0 85%;
+    }
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .excursions {
+    .container {
+      justify-content: flex-start;
+    }
+    .card-wrapper {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1112px) {
+  .excursions {
+    .card-wrapper {
+      flex: 0 0 33.3333%;
+      .card-img {
+        max-height: 130px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1345px) {
+  .excursions {
+    .card-wrapper {
+      flex: 0 0 25%;
+    }
+  }
+}
+
+/* inner page ==================================== */
+
+.excursions.moreEcscursions {
+  background: $mainColor;
+  border-bottom: 2px solid $secondColor;
+  .container {
+    flex-direction: column;
+    padding-bottom: 2em;
+    .card-wrapper,
+    .allCardsScroll {
+      display: none;
+    }
+  }
+  .bestExcursions-header__middle,
+  .bestExcursions-header__more {
+    position: static;
+    .container {
+      font-size: 1.2em;
+    }
+  }
+  .bestExcursions-header__middle {
+    .container {
+      padding: 1.2em 0;
+    }
+  }
+  .bestExcursions-header__more {
+    background: $secondColor;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    .container {
+      padding: 1.1em 0;
+      h3.more {
+        position: relative;
+        i.fa-chevron-down {
+          position: absolute;
+          top: 2px;
+          margin-left: 0.6em;
+        }
+      }
+    }
+  }
+  .excursList {
+    background: $mainColor;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    .excursList__item {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5em 0;
+      max-width: 100%;
+      align-items: stretch;
+      .type {
+        display: none;
+        padding-right: 0.8em;
+        padding-left: 0.3em;
+      }
+      .excursList__item--top {
+        background: $backgroundTextColor;
+        width: 100%;
+        padding: 1.2em 1.2em;
+        margin-bottom: 0.7em;
+        align-self: flex-start;
+        overflow-x: hidden;
+        position: relative;
+        &:hover,
+        &:focus {
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .hideText {
+          display: none;
+        }
+      }
+      a {
+        &:hover,
+        &:focus {
+          color: $secondColor;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 0.9em;
+      }
+    }
+    .excursList__item--individual {
+      .excursList__item--top {
+        background-image: url(/img/back.png);
+        background-repeat: repeat-x;
+        background-position: center;
+        font-weight: 700;
+        .type {
+          background: transparent;
+        }
+      }
+    }
+  }
+  .bestExcursions-header__more.shevronUp {
+    .container {
+      .fa-chevron-up {
+        text-shadow: 0px 6px 0px rgba(0, 0, 0, 1);
+      }
+    }
+    width: 100%;
+    top: 0;
+    transform: translateY(-105%);
+    transition: transform 0.2s ease-out;
+    position: absolute;
+  }
+  .bestExcursions-header__more.shevronUp.shevronUpIsOpen {
+    position: relative;
+    transform: translateY(0);
+  }
+  .fa-chevron-down {
+    transition: transform 0.1s ease-out;
+  }
+  .fa-chevron-down.downIsOpen {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .excursions.moreEcscursions {
+    .excursList {
+      .excursList__item {
+        flex-direction: row;
+        .excursList__item--top {
+          padding: 0.9em 1em;
+          max-width: 78%;
+          margin-bottom: 0.2em;
+          a {
+            white-space: nowrap;
+            overflow-x: hidden;
+          }
+          .hideText {
+            display: inline;
+            position: absolute;
+            width: 8%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              rgba(249, 246, 241, 0.7),
+              rgba(249, 246, 241, 0.7),
+              rgba(249, 246, 241, 1),
+              rgba(249, 246, 241, 1)
+            );
+            right: 0;
+            top: 0;
+          }
+        }
+        button {
+          width: 20%;
+          margin-left: auto;
+          align-self: center;
+          padding: 0.8em 0.2em;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 750px) {
+  .excursions.moreEcscursions {
+    .excursList {
+      .excursList__item {
+        .excursList__item--top {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+        .type {
+          display: inline;
+          background: $backgroundTextColor;
+          margin-bottom: 0.2em;
+          flex: 0 0 20%;
+          width: 20%;
+          align-self: center;
+          font-size: 1.2em;
+          display: flex;
+          justify-content: flex-end;
+          i {
+            padding-left: 0.2em;
+          }
+        }
+        a {
+          flex: 0 0 80%;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 850px) {
+  .excursions.moreEcscursions {
+    .excursList {
+      .excursList__item {
+        a {
+          .type {
+            flex-basis: 35%;
+            max-width: 35%;
+            padding-left: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1490px) {
+  .excursions.moreEcscursions {
+    .excursList {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-between;
+
+      .excursList__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: stretch;
+        padding-right: 2em;
+        &:nth-child(2n) {
+          padding-right: 0em;
+        }
+        .excursList__item--top {
+          align-self: auto;
+          a,
+          .type {
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+}

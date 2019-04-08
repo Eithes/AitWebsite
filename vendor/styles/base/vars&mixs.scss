@@ -1,0 +1,23 @@
+/* 
+=========================================================
+Variables
+=========================================================
+*/
+
+$mainColor: #004466;
+$secondColor: #66ccee;
+$thirdColor: #ffcc77;
+$opacueColor: darken(#4c6876, 10%);
+$headerColor: #fff;
+$textColor: #333333;
+$backgroundTextColor: #f9f6f1;
+
+@mixin headers-mix {
+  font-weight: 500;
+  color: $headerColor;
+}
+
+@mixin text-mix {
+  color: $textColor;
+  font-size: 0.95em;
+}

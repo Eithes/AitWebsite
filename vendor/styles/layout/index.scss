@@ -1,0 +1,49 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+body {
+  background: #f5f5f5;
+  position: relative;
+  @include text-mix;
+}
+.body-homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1450px;
+  width: 90%;
+  margin: 0 auto;
+}
+.btn {
+  background-color: $thirdColor;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: lighten($thirdColor, 3%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+  // was bug or smth in edge
+}
+
+@import './sections/excursionsSection.scss';
+@import './sections/footerSection.scss';
+@import './sections/gallerySection.scss';
+@import './sections/headerSection.scss';
+@import './sections/reviewsSection.scss';
+@import './sections/textSection.scss';

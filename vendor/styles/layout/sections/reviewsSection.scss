@@ -1,0 +1,160 @@
+.reviews-homepage {
+  background: $mainColor;
+  .container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews-header {
+    @include headers-mix;
+    padding: 1.5em 0;
+    padding-bottom: 2em;
+  }
+  .review {
+    background: #f9f6f1;
+    padding: 1.5em;
+    padding-left: 2em;
+    display: flex;
+    margin-bottom: 3em;
+    flex-direction: column;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    &-img {
+      max-width: 150px;
+      flex: 0 0 15%;
+      padding-bottom: 1em;
+      img {
+        height: 64px;
+        margin: auto;
+        width: auto;
+      }
+    }
+    &-content {
+      display: flex;
+      flex: 0 0 85%;
+      flex-direction: column;
+      &_header {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5em 0;
+      }
+      .reviewUsername {
+        margin-right: 1em;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.42857143;
+      }
+      &_text {
+        display: block;
+      }
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .review {
+      flex-direction: row;
+      padding-left: 1.5em;
+      &-img {
+        padding-top: 2em;
+        padding-bottom: 0;
+        img {
+          display: block;
+        }
+      }
+      &-content {
+        padding: 1.5em;
+      }
+    }
+  }
+  .btn-reviews {
+    background-color: $secondColor;
+    padding: 1em 3em;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    &:hover,
+    &:focus {
+      background-color: lighten($secondColor, 10%);
+      border: none;
+      outline: none;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .btn-reviews {
+      margin: 0;
+      margin-right: auto;
+      margin-bottom: 2em;
+    }
+  }
+}
+/* inner reviews page ==================================== */
+
+.reviews--reviewsPage {
+  padding: 2em 0;
+  background-image: url(/img/back2.png);
+  .container.container---reviews {
+    padding: 2em 0 0 0;
+  }
+  .review {
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+  }
+  .container {
+    padding: 0;
+    display: block;
+    .btn-reviews--small {
+      background: darken($secondColor, 20%);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      color: $headerColor;
+      text-transform: initial;
+      padding: 0.5em 1em;
+      display: inline-block;
+      &:focus,
+      &:hover {
+        background: $secondColor;
+      }
+      i {
+        padding-right: 0.4em;
+      }
+    }
+  }
+}
+.paginator {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.7em;
+  padding-bottom: 0.2em;
+  margin-bottom: 1.2em;
+  li {
+    flex: 0 0 40px;
+    min-width: 40px;
+    background: $backgroundTextColor;
+    border-right: 2px solid darken($secondColor, 20%);
+    margin-bottom: 0.5em;
+    &:last-child {
+      border-right: none;
+    }
+    &:focus,
+    &:hover {
+      background: lighten($secondColor, 20%);
+    }
+  }
+  li.current {
+    background: darken($secondColor, 20%);
+    a {
+      color: $headerColor;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0.5em;
+    &:focus,
+    &:hover {
+      background: lighten($secondColor, 20%);
+    }
+  }
+}

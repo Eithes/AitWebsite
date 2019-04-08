@@ -1,0 +1,645 @@
+.main_video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  z-index: -100;
+}
+.header {
+  position: relative;
+  background-image: url(/img/beach.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 12em;
+  padding-bottom: 10em;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+  .big-logo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(98, 93, 63, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img.bigLogo {
+      max-width: 80%;
+      margin-bottom: 0.9em;
+    }
+    .headerText {
+      text-align: center;
+      width: 100%;
+      white-space: nowrap;
+      transition: all 0.2s ease-in-out;
+      margin-bottom: 0.8em;
+    }
+  }
+}
+@media screen and (min-width: 550px) {
+  body {
+    .header {
+      padding-top: 15em;
+      padding-bottom: 15em;
+    }
+  }
+}
+@media screen and (min-width: 700px) {
+  .header {
+    background: none;
+  }
+  .main_video {
+    display: block;
+    min-width: 130%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 950px) {
+  .body {
+    .header {
+      img.bigLogo {
+        max-width: 100%;
+      }
+      h2 {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1020px) {
+  .main_video {
+    min-width: 100%;
+    height: auto;
+  }
+  body {
+    .header {
+      padding-top: 18em;
+      padding-bottom: 18em;
+    }
+  }
+}
+
+.bestExcursions-header {
+  background-color: rgba(0, 40, 60, 0.7);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $headerColor;
+  transition: all 0.2s ease-out;
+  .container {
+    padding: 1.2em 1.5em;
+  }
+}
+/* inner page ==================================== */
+
+body {
+  .header-excursion {
+    .theExcursionHeader {
+      background: rgba(98, 93, 63, 0.2);
+      justify-content: flex-end;
+    }
+    .bestExcursions-header {
+      .container {
+        padding: 0.9em 0;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.header-inner {
+  position: relative;
+  padding-top: 11em;
+  padding-bottom: 11em;
+  background-image: none;
+  color: $headerColor;
+  .imageInner {
+    position: absolute;
+    transition: initial;
+    top: 0;
+    background-image: url(/img/excursions/lasiti/lasiti_400-min.jpeg);
+    background-image: -webkit-image-set(
+      url(/img/excursions/lasiti/lasiti_400-min.jpeg) 1x,
+      url(/img/excursions/lasiti/lasiti_800-min.jpeg) 2x
+    );
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .theExcursionHeader {
+    background: rgba(98, 93, 63, 0.4);
+    .headerText__container {
+      margin: 0;
+      padding: 0;
+      padding-left: 5%;
+      padding-bottom: 1em;
+      position: relative;
+    }
+    .headerText__inner {
+      white-space: normal;
+      font-size: 1.2em;
+      max-width: 700px;
+      padding: 0;
+      text-transform: uppercase;
+      margin: 0;
+
+      line-height: 1.8em;
+      font-weight: 700;
+      margin-bottom: 3em;
+
+      span {
+        background: rgba($color: #fff, $alpha: 0.9);
+        color: black;
+        padding: 0.3em 0.2em;
+      }
+    }
+
+    .order-button--big {
+      padding: 1.5em 2.5em;
+      font-weight: 700;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  .bestExcursions-header {
+    font-size: 1.2em;
+    .container {
+      padding: 0.9em 0;
+    }
+  }
+}
+@media screen and (min-width: 550px) {
+  body {
+    .header-inner {
+      padding-top: 12em;
+      padding-bottom: 12em;
+      .theExcursionHeader {
+        .headerText__inner {
+          line-height: 1.4em;
+          font-size: 1.2em;
+          padding: 0;
+          width: auto;
+          height: auto;
+
+          line-height: 1.85em;
+          font-weight: 700;
+          margin-bottom: 3em;
+        }
+        .order-button--big {
+          font-size: 1.2em;
+          padding: 0.9em 2em;
+          margin-bottom: 2.9em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .header-inner {
+    .imageInner {
+      background-image: url(/img/excursions/lasiti/lasiti_600-min.jpeg);
+      background-image: url(/img/excursions/lasiti/lasiti_600-min.jpeg);
+      background-image: -webkit-image-set(
+        url(/img/excursions/lasiti/lasiti_600-min.jpeg) 1x,
+        url(/img/excursions/lasiti/lasiti_1200-min.jpeg) 2x
+      );
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  body .header-inner {
+    .imageInner {
+      background-image: url(/img/excursions/lasiti/lasiti_800-min.jpeg);
+      background-image: -webkit-image-set(
+        url(/img/excursions/lasiti/lasiti_800-min.jpeg) 1x,
+        url(/img/excursions/lasiti/lasiti_1200-min.jpeg) 2x
+      );
+    }
+    .bestExcursions-header {
+      font-size: 1.4em;
+      .container {
+        padding: 0.9em 0;
+      }
+    }
+    .theExcursionHeader {
+      .headerText__inner {
+        margin-bottom: 2em;
+
+        font-size: 1.3em;
+        line-height: 1.85em;
+        font-weight: 700;
+        margin-bottom: 3em;
+      }
+      .order-button--big {
+        margin-bottom: 3.1em;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    .header-inner {
+      .imageInner {
+        background-image: url(/img/excursions/lasiti/lasiti_1200-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/excursions/lasiti/lasiti_2200-min.jpeg) 1x,
+          url(/img/excursions/lasiti/lasiti_huge_2x-min.jpeg) 2x
+        );
+        background-position: center;
+      }
+      padding-top: 18em;
+      padding-bottom: 18em;
+      .theExcursionHeader {
+        .headerText__inner {
+          line-height: 1.83em;
+          font-size: 1.4em;
+          font-weight: 700;
+          max-width: 700px;
+          padding: 0;
+          margin-bottom: 3em;
+
+          white-space: normal;
+          text-transform: uppercase;
+
+          span {
+            background: rgba($color: #fff, $alpha: 0.9);
+            color: black;
+            padding: 0.3em 0.2em;
+          }
+        }
+        .order-button--big {
+          font-size: 1.4em;
+          padding: 0.9em 2em;
+          margin-bottom: 2.8em;
+        }
+      }
+      .bestExcursions-header {
+        font-size: 1.5em;
+        .container {
+          padding: 0.9em 0;
+        }
+      }
+    }
+  }
+}
+// feedbsck//////////////////////////////////////////
+.header.header__feedback {
+  padding-top: 14em;
+  padding-bottom: 4em;
+  .headerText__feedback {
+    .usersIcon {
+      padding-right: 0.4em;
+    }
+  }
+  .imageInnerFeedback {
+    background-image: url(/img/feedback/boke400-min.jpeg);
+    background-image: -webkit-image-set(url(/img/feedback/boke400-min.jpeg) 1x, url(/img/feedback/boke800-min.jpeg) 2x);
+    background-position: center;
+  }
+}
+@media screen and (min-width: 400px) {
+  .header.header__feedback {
+    .imageInner {
+      background-image: url(/img/feedback/boke600-min.jpeg);
+      background-image: -webkit-image-set(
+        url(/img/feedback/boke600-min.jpeg) 1x,
+        url(/img/feedback/boke1200-min.jpeg) 2x
+      );
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .header.header__feedback {
+    .imageInner {
+      background-image: url(/img/feedback/boke800-min.jpeg);
+      background-image: -webkit-image-set(
+        url(/img/feedback/boke800-min.jpeg) 1x,
+        url(/img/feedback/boke2200-min.jpeg) 2x
+      );
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    .header.header__feedback {
+      .imageInner {
+        background-image: url(/img/feedback/boke1200-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/feedback/boke1200-min.jpeg) 1x,
+          url(/img/feedback/boke2200-min.jpeg) 2x
+        );
+      }
+    }
+  }
+}
+
+// about //////////////////////////////////////////
+.header.header__about {
+  padding-top: 14em;
+  padding-bottom: 14em;
+  .headerText__feedback {
+    padding: 0.8em 0;
+  }
+  .bestExcursions-header {
+    .container {
+      padding: 1.3em 0;
+    }
+  }
+  .imageInner {
+    background: transparent;
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    .slide {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+    }
+
+    .slide1 {
+      background-image: url(/img/about/about1_400-min.jpeg);
+      background-image: -webkit-image-set(url(/img/about/about1_400-min.jpeg) 1x, url(/img/about/about1_800-min.jpeg) 2x);
+    }
+
+    .slide2 {
+      background-image: url(/img/about/about2_400.jpeg);
+      background-image: -webkit-image-set(url(/img/about/about2_400.jpeg) 1x, url(/img/about/about2_800-min.jpeg) 2x);
+    }
+    .slide3 {
+      background-image: url(/img/about/about3_400-min.jpeg);
+      background-image: -webkit-image-set(url(/img/about/about3_400.jpeg) 1x, url(/img/about/about3_800-min.jpeg) 2x);
+    }
+    .imageInner--current {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    height: 80%;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 10%;
+    z-index: 10;
+    font-size: 2em;
+    color: $headerColor;
+    bottom: 0;
+    .fa-chevron-left,
+    .fa-chevron-right {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      position: relative;
+    }
+    .fa-chevron-left::before,
+    .fa-chevron-right::before {
+      position: absolute;
+      top: 30%;
+    }
+  }
+  .arrow-left {
+    left: 0;
+  }
+  .arrow-right {
+    right: 0;
+  }
+
+  .theExcursionHeader {
+    .order-button--big {
+      margin-top: 0em;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header.header__about {
+    .imageInner {
+      .slide1 {
+        background-image: url(/img/about/about1_800-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about1_800-min.jpeg) 1x,
+          url(/img/about/about1_1600-min.jpeg) 2x
+        );
+      }
+      .slide2 {
+        background-image: url(/img/about/about2_800-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about2_800-min.jpeg) 1x,
+          url(/img/about/about2_1600-min.jpeg) 2x
+        );
+      }
+      .slide3 {
+        background-image: url(/img/about/about3_800-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about3_800-min.jpeg) 1x,
+          url(/img/about/about3_1600-min.jpeg) 2x
+        );
+      }
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    .header.header__about {
+      padding-top: 18em;
+      padding-bottom: 18em;
+    }
+  }
+  .header.header__about {
+    .imageInner {
+      .slide1 {
+        background-image: url(/img/about/about1_1600-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about1_1600-min.jpeg) 1x,
+          url(/img/about/about1_huge-min.jpeg) 2x
+        );
+      }
+      .slide2 {
+        background-image: url(/img/about/about2_1600-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about2_1600-min.jpeg) 1x,
+          url(/img/about/about2_huge-min.jpeg) 2x
+        );
+      }
+      .slide3 {
+        background-image: url(/img/about/about3_1600-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about3_1600-min.jpeg) 1x,
+          url(/img/about/about3_huge-min.jpeg) 2x
+        );
+      }
+    }
+  }
+}
+@media screen and (min-width: 1700px) {
+  .header.header__about {
+    .imageInner {
+      .slide1 {
+        background-image: url(/img/about/about1_2250-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about1_2250-min.jpeg) 1x,
+          url(/img/about/about1_huge-min.jpeg) 2x
+        );
+      }
+      .slide2 {
+        background-image: url(/img/about/about2_2250-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about2_2250-min.jpeg) 1x,
+          url(/img/about/about2_huge-min.jpeg) 2x
+        );
+      }
+      .slide3 {
+        background-image: url(/img/about/about3_2250-min.jpeg);
+        background-image: -webkit-image-set(
+          url(/img/about/about3_2250-min.jpeg) 1x,
+          url(/img/about/about3_huge-min.jpeg) 2x
+        );
+      }
+    }
+  }
+}
+// services //////////////////////////////////////////
+.header.header__services {
+  padding-top: 10em;
+  padding-bottom: 11em;
+  .imageInner {
+    figure.slide {
+      margin: 0;
+      padding: 0;
+      figcaption {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .big-logo {
+    .headerText {
+      margin-top: 0.5em;
+      margin-bottom: 0;
+    }
+
+    .order-button--big {
+      margin-bottom: 4.5em;
+    }
+  }
+  .bestExcursions-header {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    .container {
+      padding: 0.9em 0;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .header.header__services {
+    padding-top: 14em;
+    padding-bottom: 14em;
+    font-size: 1em;
+    .big-logo {
+      .headerText {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+      }
+      .order-button--big {
+        margin-bottom: 5em;
+      }
+    }
+    .bestExcursions-header {
+      font-size: 1em;
+      line-height: 1.8em;
+    }
+  }
+}
+@media screen and (min-width: 850px) {
+  .header.header__services {
+    padding-top: 14em;
+    padding-bottom: 14em;
+    .big-logo {
+      justify-content: space-around;
+      .headerText {
+        margin-top: 0.6em;
+      }
+      .order-button--big {
+        margin-bottom: 4.5em;
+      }
+    }
+
+    .imageInner {
+      figure.slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        figcaption {
+          display: block;
+          max-width: 50%;
+          padding: 1em;
+          margin-bottom: 1.5em;
+          font-size: 1.2em;
+          line-height: 1.5em;
+          color: $headerColor;
+          background: rgba(0, 40, 60, 0.4);
+          z-index: 10;
+          transform: translateX(-2000px);
+          transition: all 0.6s ease-out;
+        }
+        figcaption.slideTextIsOpen {
+          transform: translateX(0px);
+        }
+      }
+      .imageInner--current {
+        figcaption {
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .header.header__services {
+    padding-top: 18em;
+    padding-bottom: 18em;
+    .big-logo {
+      .headerText {
+        margin-top: 1.6em;
+        margin-bottom: 0em;
+      }
+      .order-button--big {
+        margin-bottom: 4.7em;
+      }
+    }
+    .bestExcursions-header {
+      line-height: 1.8em;
+      .container {
+        padding: 0.9em;
+      }
+    }
+  }
+}
